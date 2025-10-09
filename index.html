@@ -15,6 +15,21 @@
             --dark: #0f172a;
             --light: #f8fafc;
             --success: #10b981;
+            --bg-color: #f8fafc;
+            --text-color: #0f172a;
+            --card-bg: #ffffff;
+        }
+        
+        [data-theme="dark"] {
+            --primary: #3b82f6;
+            --secondary: #ef4444;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #0f172a;
+            --success: #10b981;
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --card-bg: #1e293b;
         }
         
         * {
@@ -25,9 +40,10 @@
         
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
+            background-color: var(--bg-color);
+            color: var(--text-color);
             overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -83,6 +99,21 @@
         
         .nav-link:hover::after {
             width: 100%;
+        }
+        
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(30deg);
         }
         
         /* Hero Section */
@@ -256,7 +287,7 @@
         
         /* Projects Section */
         .projects-section {
-            background-color: #f1f5f9;
+            background-color: var(--light);
         }
         
         .projects-container {
@@ -381,7 +412,7 @@
         }
         
         .skill-category {
-            background: white;
+            background: var(--card-bg);
             border-radius: 15px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -431,7 +462,7 @@
         
         /* Certificates Section */
         .certificates-section {
-            background-color: #f1f5f9;
+            background-color: var(--light);
         }
         
         .certificates-container {
@@ -441,7 +472,7 @@
         }
         
         .certificate-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -460,6 +491,24 @@
             justify-content: center;
             color: white;
             font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .certificate-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        
+        .certificate-img i {
+            position: relative;
+            z-index: 2;
         }
         
         .certificate-info {
@@ -476,23 +525,102 @@
             margin-bottom: 15px;
         }
         
-        .btn-download {
+        .btn-preview {
             background: var(--success);
             color: white;
             border: none;
-            padding: 8px 20px;
+            padding: 10px 20px;
             border-radius: 50px;
             font-weight: 500;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 5px;
+            text-decoration: none;
+            cursor: pointer;
         }
         
-        .btn-download:hover {
+        .btn-preview:hover {
             background: #0da271;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+            color: white;
+        }
+        
+        /* PDF Preview Modal */
+        .pdf-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1100;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pdf-modal.active {
+            display: flex;
+        }
+        
+        .pdf-modal-content {
+            background: var(--card-bg);
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pdf-modal-header {
+            padding: 20px;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .pdf-modal-body {
+            padding: 20px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .pdf-preview {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+            margin-bottom: 20px;
+        }
+        
+        .pdf-preview iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .pdf-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .btn-close-modal {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
         
         /* Chatbot Section - Updated to Side Panel */
@@ -507,7 +635,7 @@
             right: -400px;
             width: 400px;
             height: 100vh;
-            background: white;
+            background: var(--card-bg);
             box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
             z-index: 1050;
             transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -539,7 +667,7 @@
             flex: 1;
             padding: 20px;
             overflow-y: auto;
-            background: #f8fafc;
+            background: var(--bg-color);
         }
         
         .chat-message {
@@ -563,8 +691,8 @@
         }
         
         .bot-message .message-bubble {
-            background: white;
-            color: var(--dark);
+            background: var(--card-bg);
+            color: var(--text-color);
             border-bottom-left-radius: 5px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
         }
@@ -573,6 +701,40 @@
             background: var(--primary);
             color: white;
             border-bottom-right-radius: 5px;
+        }
+        
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--text-color);
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+        
+        .typing-dot:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+        
+        .typing-dot:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+        
+        @keyframes typing {
+            0%, 80%, 100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
         
         .suggestions {
@@ -611,6 +773,8 @@
             border-radius: 50px;
             outline: none;
             transition: all 0.3s ease;
+            background: var(--card-bg);
+            color: var(--text-color);
         }
         
         .chat-input:focus {
@@ -897,6 +1061,10 @@
             .chatbot-panel {
                 width: 320px;
             }
+            
+            .pdf-modal-content {
+                width: 95%;
+            }
         }
         
         @media (max-width: 576px) {
@@ -927,6 +1095,10 @@
                 width: 100%;
                 right: -100%;
             }
+            
+            .pdf-actions {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -954,6 +1126,11 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#certificates">Certificates</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="theme-toggle" id="theme-toggle">
+                                <i class="fas fa-moon"></i>
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -1214,58 +1391,80 @@
             <div class="certificates-container">
                 <div class="certificate-card">
                     <div class="certificate-img">
-                        <i class="fas fa-award"></i>
+                        <i class="fas fa-file-pdf"></i>
                     </div>
                     <div class="certificate-info">
-                        <h4>Full-Stack Web Development</h4>
-                        <p>Completed a comprehensive full-stack web development course covering HTML, CSS, JavaScript, React, Node.js, and MySQL.</p>
-                        <a href="#" class="btn-download">
-                            <i class="fas fa-download"></i> Download PDF
-                        </a>
+                        <h4>My Curriculum Vitae</h4>
+                        <p>Below is a brief overview of my professional background and achievements. You can preview the full CV using the link below.</p>
+                        <button class="btn-preview preview-pdf" data-pdf="files/CV.pdf" data-title="My Curriculum Vitae">
+                            <i class="fas fa-eye"></i> Preview PDF
+                        </button>
                     </div>
                 </div>
                 
                 <div class="certificate-card">
                     <div class="certificate-img">
-                        <i class="fas fa-award"></i>
+                        <i class="fas fa-file-pdf"></i>
                     </div>
                     <div class="certificate-info">
                         <h4>JavaScript Advanced Concepts</h4>
                         <p>Mastered advanced JavaScript concepts including ES6+, asynchronous programming, and modern frameworks.</p>
-                        <a href="#" class="btn-download">
-                            <i class="fas fa-download"></i> Download PDF
-                        </a>
+                        <button class="btn-preview preview-pdf" data-pdf="files/JS.pdf" data-title="JavaScript Certificate">
+                            <i class="fas fa-eye"></i> Preview PDF
+                        </button>
                     </div>
                 </div>
                 
                 <div class="certificate-card">
                     <div class="certificate-img">
-                        <i class="fas fa-award"></i>
+                        <i class="fas fa-file-pdf"></i>
                     </div>
                     <div class="certificate-info">
-                        <h4>React & Redux</h4>
-                        <p>Completed an intensive React and Redux course focusing on building scalable and maintainable applications.</p>
-                        <a href="#" class="btn-download">
-                            <i class="fas fa-download"></i> Download PDF
-                        </a>
+                        <h4>Cyber Security</h4>
+                        <p>Passed a Cybersecurity Hackafest quiz which was held in LPU from outside company</p>
+                        <button class="btn-preview preview-pdf" data-pdf="files/Cyber-Hackafest.pdf" data-title="Cybersecurity Certificate">
+                            <i class="fas fa-eye"></i> Preview PDF
+                        </button>
                     </div>
                 </div>
                 
                 <div class="certificate-card">
                     <div class="certificate-img">
-                        <i class="fas fa-award"></i>
+                        <i class="fas fa-file-pdf"></i>
                     </div>
                     <div class="certificate-info">
-                        <h4>Node.js Backend Development</h4>
-                        <p>Learned to build robust backend systems using Node.js, Express, and various databases.</p>
-                        <a href="#" class="btn-download">
-                            <i class="fas fa-download"></i> Download PDF
-                        </a>
+                        <h4>Kali Linux - Certificate</h4>
+                        <p>Learned twindows hacking with Kali Linux, through online mode.</p>
+                        <button class="btn-preview preview-pdf" data-pdf="files/Kalilinux.pdf" data-title="Windows Hacking Certificate">
+                            <i class="fas fa-eye"></i> Preview PDF
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- PDF Preview Modal -->
+    <div class="pdf-modal" id="pdf-modal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdf-modal-title">PDF Preview</h3>
+                <button class="btn-close-modal" id="close-pdf-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="pdf-modal-body">
+                <div class="pdf-preview">
+                    <iframe id="pdf-preview-frame" src=""></iframe>
+                </div>
+                <div class="pdf-actions">
+                    <button class="btn-preview" id="close-pdf-btn" style="background: var(--secondary);">
+                        <i class="fas fa-times"></i> Close Preview
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Chatbot Section (Hidden) -->
     <section id="chatbot" class="chatbot-section">
@@ -1340,7 +1539,7 @@
     <div class="chatbot-overlay" id="chatbot-overlay"></div>
     <div class="chatbot-panel" id="chatbot-panel">
         <div class="chatbot-header">
-            <h3><i class="fas fa-robot"></i> MO Assistant</h3>
+            <h3><i class="fas fa-robot"></i> MO Assistant - <a href="https://www.instagram.com/mo_little11?igsh=MTZsdWhpeXg5ZGttYQ%3D%3D&utm_source=qr">#1011</a></h3>
             <button class="btn-close-chat" id="close-chat" style="background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer;">
                 <i class="fas fa-times"></i>
             </button>
@@ -1381,37 +1580,37 @@
             {
                 title: "E-Commerce Website",
                 description: "A full-stack e-commerce platform with user authentication, product catalog, shopping cart, and realtime OTP integration.",
-                technologies: "Html, CSS, JS, Bootstrap, Node.js, MySQL, ",
-                github: "https://github.com/mohammed/ecommerce",
-                background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+                technologies: "Html, CSS, JS, Bootstrap, Node.js, MySQL ",
+                github: "https://github.com/Mohammedsnake/FourBrothersSportsCenter-Backend",
+                background: "url('images/FBSC.png') no-repeat center/cover",
             },
             {
-                title: "Task Management App",
-                description: "A responsive task management application with drag-and-drop functionality, categories, and deadline tracking.",
-                technologies: "JavaScript, HTML, CSS, Local Storage",
-                github: "https://github.com/mohammed/taskmanager",
-                background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+                title: "Files Management System",
+                description: "A responsive files management application for my family with proper authentication, view, upload, and delete functionalities.",
+                technologies: "JavaScript, HTML, CSS, MySQL, Node.js, Bootstrap",
+                github: "https://mohammedsnake.github.io/BrothersCloud-frontend/",
+                background: "url('images/brothers_cloud.png') no-repeat center/cover",
             },
             {
-                title: "Weather Dashboard",
-                description: "A weather application that displays current conditions and forecasts for multiple cities with interactive charts.",
-                technologies: "React, Chart.js, Weather API",
-                github: "https://github.com/mohammed/weather-dashboard",
-                background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
+                title: "Football Club System",
+                description: "A football club management system with player stats, match schedules, and performance analytics.",
+                technologies: "Html, CSS, JavaScript, Bootstrap, Node.js, MySQL",
+                github: "https://github.com/Mohammedsnake/ItalyKids-Backend",
+                background: "url('images/italykids.png') no-repeat center/cover",
             },
             {
-                title: "Social Media Platform",
-                description: "A social networking site with user profiles, posts, comments, likes, and real-time notifications.",
-                technologies: "MERN Stack, Socket.io, Cloudinary",
-                github: "https://github.com/mohammed/social-media",
-                background: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+                title: "Dynamic Form Generator",
+                description: "A dynamic form generator that allows users to create and customize forms with various input types and validations.",
+                technologies: "php, HTML, CSS, JavaScript",
+                github: "https://github.com/Mohammedsnake/form_generator",
+                background: "url('images/form_generator.png') no-repeat center/cover",
             },
             {
                 title: "Portfolio Website",
                 description: "A responsive portfolio website with project showcase, skills section, and contact form.",
                 technologies: "HTML, CSS, JavaScript, Bootstrap",
-                github: "https://github.com/mohammed/portfolio",
-                background: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
+                github: "https://github.com/Mohammedsnake/portfolio",
+                background: "url('images/portfolio.png') no-repeat center/cover",
             }
         ];
 
@@ -1499,6 +1698,77 @@
             });
         }
         
+        // Theme Toggle Functionality
+        function initThemeToggle() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle.querySelector('i');
+            
+            // Check for saved theme preference or default to light
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            
+            // Apply the saved theme
+            if (currentTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+            
+            // Toggle theme
+            themeToggle.addEventListener('click', () => {
+                if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                    document.documentElement.removeAttribute('data-theme');
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        }
+        
+        // PDF Preview Functionality
+        function initPDFPreview() {
+            const pdfModal = document.getElementById('pdf-modal');
+            const pdfPreviewFrame = document.getElementById('pdf-preview-frame');
+            const pdfModalTitle = document.getElementById('pdf-modal-title');
+            const closePdfModal = document.getElementById('close-pdf-modal');
+            const closePdfBtn = document.getElementById('close-pdf-btn');
+            const previewButtons = document.querySelectorAll('.preview-pdf');
+            
+            // Open PDF preview
+            previewButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const pdfPath = button.getAttribute('data-pdf');
+                    const pdfTitle = button.getAttribute('data-title');
+                    
+                    pdfPreviewFrame.src = pdfPath;
+                    pdfModalTitle.textContent = pdfTitle;
+                    pdfModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // Close PDF preview
+            function closePDFPreview() {
+                pdfModal.classList.remove('active');
+                pdfPreviewFrame.src = '';
+                document.body.style.overflow = '';
+            }
+            
+            closePdfModal.addEventListener('click', closePDFPreview);
+            closePdfBtn.addEventListener('click', closePDFPreview);
+            
+            // Close modal when clicking outside
+            pdfModal.addEventListener('click', (e) => {
+                if (e.target === pdfModal) {
+                    closePDFPreview();
+                }
+            });
+        }
+        
         // Chatbot Functionality
         function initChatbot() {
             const chatbotBall = document.getElementById('chatbot-ball');
@@ -1520,7 +1790,7 @@
 
                 "future": "MO plans to complete his Diploma in CSE, then pursue a Bachelor's degree while working on real-world projects to gain practical experience. His short-term goal is to secure a position as a full-stack developer where he can contribute to meaningful projects and continue learning. Long-term, he aims to become a senior developer or tech lead, and eventually start his own tech company focusing on innovative web solutions. He's particularly interested in emerging technologies like AI integration in web applications and progressive web apps.",
                 
-                "default": "I'm not sure I understand. Could you please rephrase your question? You can also ask about MO's background, skills, projects, or future plans. I'm here to help you learn more about Mohammed Aminu Shehe!"
+                "default": "Hi! Could you please rephrase your question? You can also ask about MO's background, skills, projects, or future plans. I'm here to help you learn more about Mohammed Aminu Shehe!"
             };
             
             // Keywords for matching user questions
@@ -1551,6 +1821,67 @@
             
             closeChat.addEventListener('click', closeChatbot);
             chatbotOverlay.addEventListener('click', closeChatbot);
+            
+            // Add typing indicator
+            function addTypingIndicator() {
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'typing-indicator';
+                
+                const typingBubble = document.createElement('div');
+                typingBubble.className = 'message-bubble';
+                
+                const typingDots = document.createElement('div');
+                typingDots.className = 'typing-dots';
+                typingDots.innerHTML = `
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                `;
+                
+                typingBubble.appendChild(typingDots);
+                typingDiv.appendChild(typingBubble);
+                chatbotBody.appendChild(typingDiv);
+                
+                // Scroll to bottom
+                chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                
+                return typingDiv;
+            }
+            
+            // Remove typing indicator
+            function removeTypingIndicator(typingIndicator) {
+                if (typingIndicator && typingIndicator.parentNode) {
+                    typingIndicator.parentNode.removeChild(typingIndicator);
+                }
+            }
+            
+            // Type message with animation
+            function typeMessage(message, callback) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'chat-message bot-message';
+                
+                const bubble = document.createElement('div');
+                bubble.className = 'message-bubble';
+                
+                messageDiv.appendChild(bubble);
+                chatbotBody.appendChild(messageDiv);
+                
+                let index = 0;
+                const typingSpeed = 20; // milliseconds per character
+                
+                function typeCharacter() {
+                    if (index < message.length) {
+                        bubble.textContent += message.charAt(index);
+                        index++;
+                        chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                        setTimeout(typeCharacter, typingSpeed);
+                    } else if (callback) {
+                        callback();
+                    }
+                }
+                
+                typeCharacter();
+            }
             
             // Add message to chat
             function addMessage(message, isUser = false) {
@@ -1604,10 +1935,14 @@
             function processMessage(message) {
                 addMessage(message, true);
                 
+                // Show typing indicator
+                const typingIndicator = addTypingIndicator();
+                
                 // Simulate typing delay
                 setTimeout(() => {
+                    removeTypingIndicator(typingIndicator);
                     const response = findBestResponse(message);
-                    addMessage(response);
+                    typeMessage(response);
                 }, 1000);
             }
             
@@ -1641,6 +1976,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             initProjectsSlider();
             animateSkillBars();
+            initThemeToggle();
+            initPDFPreview();
             initChatbot();
             
             // Add smooth scrolling for navigation links
