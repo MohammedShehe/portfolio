@@ -95,7 +95,7 @@ const projectsData = [
         "description": "An Islamic gamification mobile app for tracking daily ibadat (worship) with streaks, points, and rewards. Features include Salah tracking with individual prayer logging, Quran verses, Islamic events calendar, reminder system, analytics graphs, and history view.",
         "technologies": "Flutter, Dart, Shared Preferences, Provider, fl_chart, table_calendar, image_picker",
         "category": "mobile",
-        "image": "images/salahstreaks.jpeg",
+        "image": "images/salah.jpeg",
         "link": "https://github.com/mohammedshehe/salahstreaks"
     }
     ];
