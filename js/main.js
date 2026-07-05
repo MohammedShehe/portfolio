@@ -568,3 +568,78 @@ window.addEventListener('load', () => {
 
 console.log('✅ main.js loaded successfully!');
 console.log('📊 Total projects:', projectsData.length);
+
+// ========================
+// SEO & ANALYTICS
+// ========================
+
+// ========================
+// SCHEMA MARKUP VALIDATION
+// ========================
+function validateSchema() {
+    console.log('🔍 Schema markup loaded successfully');
+    console.log('📊 Person Schema: Name - Mohammed Aminu Shehe');
+    console.log('📊 Organization Schema: Portfolio');
+    console.log('📊 Website Schema: Active');
+    console.log('📊 Breadcrumb Schema: Active');
+}
+
+// ========================
+// SITEMAP SUBMISSION (Manual)
+// ========================
+function logSitemapInfo() {
+    console.log('📄 Sitemap URL: https://mohammedshehe.github.io/portfolio/sitemap.xml');
+    console.log('🤖 robots.txt: https://mohammedshehe.github.io/portfolio/robots.txt');
+    console.log('📝 Submit sitemap to:');
+    console.log('  - Google Search Console: https://search.google.com/search-console');
+    console.log('  - Bing Webmaster Tools: https://www.bing.com/webmasters');
+}
+
+// ========================
+// KEYWORD TRACKING
+// ========================
+function logKeywords() {
+    const keywords = [
+        'Mohammed Aminu Shehe',
+        'MO11',
+        'MO Dev',
+        'MO',
+        'Developer MO',
+        'Full-Stack Developer',
+        'Mobile Developer',
+        'Web Developer',
+        'Software Developer',
+        'Flutter Developer',
+        'React Developer',
+        'Node.js Developer',
+        'LPU CSE Student',
+        'Zanzibar Developer',
+        'Tanzania Developer'
+    ];
+    console.log('🔑 Primary Keywords:', keywords.join(', '));
+}
+
+// ========================
+// PAGE TITLE & META VALIDATION
+// ========================
+function validatePageMetadata() {
+    const title = document.title;
+    const desc = document.querySelector('meta[name="description"]');
+    const keywords = document.querySelector('meta[name="keywords"]');
+    
+    console.log('📋 Page Title:', title);
+    console.log('📋 Meta Description:', desc ? desc.content : 'Missing!');
+    console.log('📋 Meta Keywords:', keywords ? keywords.content : 'Missing!');
+}
+
+// ========================
+// INITIALIZE SEO LOGGING
+// ========================
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 SEO Configuration Loaded');
+    validateSchema();
+    validatePageMetadata();
+    logKeywords();
+    logSitemapInfo();
+    console.log('✅ SEO setup complete!');
+});

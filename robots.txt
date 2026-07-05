@@ -1,0 +1,14 @@
+# robots.txt for Mohammed Aminu Shehe Portfolio
+# Allow all crawlers to index the site
+
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+Disallow: /files/
+
+# Sitemap location
+Sitemap: https://mohammedshehe.github.io/portfolio/sitemap.xml
+
+# Crawl-delay for search engines
+# Googlebot: crawl-delay: 1
+# Bingbot: crawl-delay: 1
