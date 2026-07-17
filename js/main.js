@@ -27,6 +27,14 @@ const projectsData = [
         link: "https://www.fourbrothers.online"
     },
     {
+        title: "Business Management System",
+        description: "A full-stack business management system with user authentication with 2 Factor Authentication, Three different Interfaces for three different user roles.",
+        technologies: "HTML, CSS, JS, Node.js, MySQL",
+        category: "fullstack",
+        image: "images/fbbms.png",
+        link: "https://management.fourbrothers.online"
+    },
+    {
         title: "Files Management System",
         description: "A responsive files management application with proper authentication, view, upload, and delete functionalities.",
         technologies: "JavaScript, HTML, CSS, MySQL, Node.js",
@@ -220,7 +228,7 @@ function initPdfPreview() {
 const botResponses = {
     about: "Mohammed Aminu Shehe is a passionate full-stack web and mobile developer born on 12th June 2005. He's currently in his 3rd year of Diploma in CSE at Lovely Professional University, Punjab. He completed a 4-month internship at NyotaTech Hub in Zanzibar (Jan 2026 - May 2026) and a 2-months training at eGovernment Agency, Zanzibar.",
     skills: "MO has expertise in: HTML/CSS (95%), JavaScript (90%), Dart (85%), Python (85%), PHP (85%), Flutter (85%), React (85%), Node.js (80%), Firebase (80%), Bootstrap (95%), Git/GitHub (90%), UI/UX Design (85%), RESTful APIs (85%), and Problem Solving (90%).",
-    projects: "MO has developed 10+ projects including: \n🔹 Hat-Trick Scents - E-commerce website for luxury perfumes with WhatsApp ordering & chatbot. \n🔹 SalahStreaks - Islamic gamification mobile app for tracking daily ibadat with streaks, points, Quran verses, and reminders. \n🔹 Digital Health Tracker - Mobile health monitoring app. \n🔹 E-Commerce Platform - Full-featured online store. \n🔹 Files Management System - Document organization system. \n🔹 Football Club System - Team management platform. \n🔹 VitalSign Pro - Healthcare management system. \n🔹 ABC Medicos Pharmacy - Pharmacy management. \n🔹 MiniMarket E-Commerce - Grocery store platform. \n🔹 Dynamic Form Generator - Form builder tool. \n🔹 Portfolio Website - Personal portfolio. \n🔹 GameNest - Gaming platform.",
+    projects: "MO has developed 10+ projects including: \n🔹 Hat-Trick Scents - E-commerce website for luxury perfumes with WhatsApp ordering & chatbot. \n🔹 SalahStreaks - Islamic gamification mobile app for tracking daily ibadat with streaks, points, Quran verses, and reminders. \n🔹 Digital Health Tracker - Mobile health monitoring app. \n🔹 Business Management System - Full-stack business management system with role-based access control. \n🔹 E-Commerce Platform - Full-featured online store. 🔹 Files Management System - Document organization system. \n🔹 Football Club System - Team management platform. \n🔹 VitalSign Pro - Healthcare management system. \n🔹 ABC Medicos Pharmacy - Pharmacy management. \n🔹 MiniMarket E-Commerce - Grocery store platform. \n🔹 Dynamic Form Generator - Form builder tool. \n🔹 Portfolio Website - Personal portfolio. \n🔹 GameNest - Gaming platform.",
     experience: "MO's experience includes: \n1. Mobile Development Intern at NyotaTech Hub (Jan-May 2026) - Built Flutter apps including SalahStreaks with Firebase integration and state management using Provider. \n2. Full-Stack Web Training at eGovernment Agency (Jul-Aug 2025) - Built responsive UIs and RESTful APIs using Node.js and Express. \n3. Currently pursuing Diploma in CSE at LPU (2023-Present) with 8.5+ CGPA.",
     education: "MO is currently in his 3rd (final) year of Diploma in Computer Science Engineering at Lovely Professional University, Punjab. He maintains a CGPA of 8.5+. He completed his Higher Secondary Education in Science stream from Zanzibar, Tanzania.",
     certificates: "MO holds 7 certificates: \n1. My Curriculum Vitae \n2. Summer Training Certificate (eGAZ) \n3. JavaScript Advanced Concepts \n4. Cyber Security - Hackafest \n5. Kali Linux & Windows Hacking \n6. eGAZ Industrial Training \n7. NyotaTech Hub Internship.",
