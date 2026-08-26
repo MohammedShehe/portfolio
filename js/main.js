@@ -1,22 +1,36 @@
 // ========================
-// PROJECT DATA - COMPLETE
+// PROJECT DATA - COMPLETE WITH LIVINKEY
 // ========================
 const projectsData = [
+    // ============================================================
+    // LEVEL 1: COMPLETED & DEPLOYED PROJECTS (LIVE)
+    // ============================================================
+    {
+        title: "Livinkey - PG Management Platform",
+        description: "A comprehensive PG management platform with admin console, public website, backend API, and mobile applications. Features include tenant/guest management, billing, payments, maintenance requests, document management, feedback system, and real-time notifications.",
+        technologies: "HTML, CSS, JavaScript, Node.js, Express.js, MySQL, Flutter, Firebase Cloud Messaging",
+        category: "fullstack",
+        image: "images/livinkey.png",
+        link: "https://livinkey.com",
+        status: "live"
+    },
+    {
+        title: "Livinkey App",
+        description: "A cross-platform mobile application for PG tenants and guests built with Flutter. Features include real-time push notifications (FCM), bill viewing and payment proof submission, maintenance request management, document uploads, and feedback system. Provides a seamless experience for managing stay-related activities on the go.",
+        technologies: "Flutter, Dart, Firebase Cloud Messaging, Provider, Dio, Shared Preferences",
+        category: "mobile",
+        image: "images/livinkey_app.jpg",
+        link: "https://drive.google.com/file/d/1tYPxWm3rS49XAeSRb53oDHmbASZN0m9p/view",
+        status: "live"
+    },
     {
         title: "Hat-Trick Scents",
         description: "A modern, responsive e-commerce website for luxury perfumes and cosmetics. Features include product catalog, interactive shopping cart, WhatsApp ordering, dark/light theme, and smart chatbot assistant.",
         technologies: "HTML5, CSS3, JavaScript, Bootstrap 5",
         category: "fullstack",
         image: "images/HatTrick.jpeg",
-        link: "https://hattrickscents.online"
-    },
-    {
-        title: "Digital Health Tracker",
-        description: "A cross-platform mobile health application developed during a 4-month internship. Features include JWT authentication, health metrics logging, FCM notifications, and Google Fit API integration.",
-        technologies: "Flutter, Dart, Node.js, Express, MySQL",
-        category: "mobile",
-        image: "images/dht.jpg",
-        link: "https://github.com/mohammedshehe/dht"
+        link: "https://hattrickscents.online",
+        status: "live"
     },
     {
         title: "E-Commerce Platform",
@@ -24,7 +38,8 @@ const projectsData = [
         technologies: "HTML, CSS, JS, Node.js, MySQL",
         category: "fullstack",
         image: "images/FBSC.png",
-        link: "https://www.fourbrothers.online"
+        link: "https://fourbrothers.online",
+        status: "live"
     },
     {
         title: "Business Management System",
@@ -32,7 +47,8 @@ const projectsData = [
         technologies: "HTML, CSS, JS, Node.js, MySQL",
         category: "fullstack",
         image: "images/fbbms.png",
-        link: "https://management.fourbrothers.online"
+        link: "https://management.fourbrothers.online",
+        status: "live"
     },
     {
         title: "Files Management System",
@@ -40,55 +56,8 @@ const projectsData = [
         technologies: "JavaScript, HTML, CSS, MySQL, Node.js",
         category: "fullstack",
         image: "images/brothers_cloud.png",
-        link: "https://mohammedshehe.github.io/BrothersCloud-frontend/"
-    },
-    {
-        title: "Football Club System",
-        description: "A football club management system with player stats, match schedules, and performance analytics.",
-        technologies: "HTML, CSS, JavaScript, Node.js, MySQL",
-        category: "fullstack",
-        image: "images/italykids.png",
-        link: "https://github.com/mohammedshehe/ItalyKids-Backend"
-    },
-    {
-        title: "VitalSign Pro",
-        description: "A comprehensive healthcare management system with multi-role access, patient tracking, QR code integration, and real-time analytics.",
-        technologies: "Python, Tkinter, SQLite, Matplotlib",
-        category: "fullstack",
-        image: "images/VitalSign.png",
-        link: "https://github.com/MohammedShehe/HospitalManagementSystem-Python"
-    },
-    {
-        title: "ABC Medicos - Pharmacy",
-        description: "A comprehensive pharmacy management solution with dual-role access, prescription processing, and real-time inventory management.",
-        technologies: "PHP, MySQL, JavaScript, Bootstrap",
-        category: "fullstack",
-        image: "images/PMS.png",
-        link: "https://github.com/MohammedShehe/ABCMEDICOS.git"
-    },
-    {
-        title: "MiniMarket E-Commerce",
-        description: "A full-featured e-commerce platform with user authentication, product catalog, shopping cart, OTP verification, and order management.",
-        technologies: "PHP, MySQL, JavaScript, Bootstrap",
-        category: "fullstack",
-        image: "images/LawgateMiniMarket.png",
-        link: "https://github.com/MohammedShehe/minimarket.git"
-    },
-    {
-        title: "Dynamic Form Generator",
-        description: "A dynamic form generator that allows users to create and customize forms with various input types and validations.",
-        technologies: "PHP, HTML, CSS, JavaScript",
-        category: "backend",
-        image: "images/form_generator.png",
-        link: "https://github.com/mohammedshehe/form_generator"
-    },
-    {
-        title: "Portfolio Website",
-        description: "A responsive portfolio website with project showcase, skills section, and contact form.",
-        technologies: "HTML, CSS, JavaScript, Bootstrap",
-        category: "frontend",
-        image: "images/portfolio.png",
-        link: "https://github.com/mohammedshehe/portfolio"
+        link: "https://mohammedshehe.github.io/BrothersCloud-frontend/",
+        status: "live"
     },
     {
         title: "GameNest",
@@ -96,17 +65,86 @@ const projectsData = [
         technologies: "HTML, CSS, JavaScript, Bootstrap",
         category: "frontend",
         image: "images/GameNest.png",
-        link: "https://mohammedshehe.github.io/GameNest"
+        link: "https://mohammedshehe.github.io/GameNest",
+        status: "live"
     },
     {
-        "title": "SalahStreaks",
-        "description": "An Islamic gamification mobile app for tracking daily ibadat (worship) with streaks, points, and rewards. Features include Salah tracking with individual prayer logging, Quran verses, Islamic events calendar, reminder system, analytics graphs, and history view.",
-        "technologies": "Flutter, Dart, Shared Preferences, Provider, fl_chart, table_calendar, image_picker",
-        "category": "mobile",
-        "image": "images/salah.jpeg",
-        "link": "https://github.com/mohammedshehe/salahstreaks"
+        title: "Portfolio Website",
+        description: "A responsive portfolio website with project showcase, skills section, and contact form.",
+        technologies: "HTML, CSS, JavaScript, Bootstrap",
+        category: "frontend",
+        image: "images/portfolio.png",
+        link: "https://molittle.fourbrothers.online",
+        status: "live"
+    },
+
+    // ============================================================
+    // LEVEL 2: COMPLETED BUT NOT DEPLOYED (GitHub Repositories)
+    // ============================================================
+    {
+        title: "SalahStreaks",
+        description: "An Islamic gamification mobile app for tracking daily ibadat (worship) with streaks, points, and rewards. Features include Salah tracking with individual prayer logging, Quran verses, Islamic events calendar, reminder system, analytics graphs, and history view.",
+        technologies: "Flutter, Dart, Shared Preferences, Provider, fl_chart, table_calendar, image_picker",
+        category: "mobile",
+        image: "images/salah.jpeg",
+        link: "https://github.com/mohammedshehe/salahstreaks",
+        status: "completed"
+    },
+    {
+        title: "Digital Health Tracker",
+        description: "A cross-platform mobile health application developed during a 4-month internship. Features include JWT authentication, health metrics logging, FCM notifications, and Google Fit API integration.",
+        technologies: "Flutter, Dart, Node.js, Express, MySQL",
+        category: "mobile",
+        image: "images/dht.jpg",
+        link: "https://github.com/mohammedshehe/dht",
+        status: "completed"
+    },
+    {
+        title: "Football Club System",
+        description: "A football club management system with player stats, match schedules, and performance analytics.",
+        technologies: "HTML, CSS, JavaScript, Node.js, MySQL",
+        category: "fullstack",
+        image: "images/italykids.png",
+        link: "https://github.com/mohammedshehe/ItalyKids-Backend",
+        status: "completed"
+    },
+    {
+        title: "VitalSign Pro",
+        description: "A comprehensive healthcare management system with multi-role access, patient tracking, QR code integration, and real-time analytics.",
+        technologies: "Python, Tkinter, SQLite, Matplotlib",
+        category: "fullstack",
+        image: "images/VitalSign.png",
+        link: "https://github.com/MohammedShehe/HospitalManagementSystem-Python",
+        status: "completed"
+    },
+    {
+        title: "ABC Medicos - Pharmacy",
+        description: "A comprehensive pharmacy management solution with dual-role access, prescription processing, and real-time inventory management.",
+        technologies: "PHP, MySQL, JavaScript, Bootstrap",
+        category: "fullstack",
+        image: "images/PMS.png",
+        link: "https://github.com/MohammedShehe/ABCMEDICOS.git",
+        status: "completed"
+    },
+    {
+        title: "MiniMarket E-Commerce",
+        description: "A full-featured e-commerce platform with user authentication, product catalog, shopping cart, OTP verification, and order management.",
+        technologies: "PHP, MySQL, JavaScript, Bootstrap",
+        category: "fullstack",
+        image: "images/LawgateMiniMarket.png",
+        link: "https://github.com/MohammedShehe/minimarket.git",
+        status: "completed"
+    },
+    {
+        title: "Dynamic Form Generator",
+        description: "A dynamic form generator that allows users to create and customize forms with various input types and validations.",
+        technologies: "PHP, HTML, CSS, JavaScript",
+        category: "backend",
+        image: "images/form_generator.png",
+        link: "https://github.com/mohammedshehe/form_generator",
+        status: "completed"
     }
-    ];
+];
 
 // ========================
 // RENDER PROJECTS
@@ -121,25 +159,36 @@ function renderProjects(category = 'all') {
         return;
     }
     
-    const filtered = category === 'all' 
+    let filtered = category === 'all' 
         ? projectsData 
         : projectsData.filter(p => p.category === category);
+    
+    // Sort: Live projects first, then completed projects
+    filtered.sort((a, b) => {
+        const order = { live: 0, completed: 1 };
+        const statusA = a.status || 'completed';
+        const statusB = b.status || 'completed';
+        return (order[statusA] || 1) - (order[statusB] || 1);
+    });
     
     if (filtered.length === 0) {
         projectsGrid.innerHTML = '<p style="color: var(--text-secondary); text-align: center; padding: 40px;">No projects found in this category.</p>';
         return;
     }
     
+    // Add status badge to live projects
     let html = '';
     for (let i = 0; i < filtered.length; i++) {
         const project = filtered[i];
         const imagePath = project.image || 'images/placeholder.png';
+        const isLive = project.status === 'live';
         
         html += `
             <div class="project-card">
                 <div class="project-card-image" style="background-image: url('${imagePath}'); background-size: cover; background-position: center; background-color: #6c2bd9;">
                     <img src="${imagePath}" alt="${project.title}" loading="eager" 
                          onerror="this.style.display='none'; this.parentElement.style.backgroundImage='linear-gradient(135deg, #6c2bd9, #4a1a9e)'">
+                    ${isLive ? '<span style="position:absolute;top:12px;right:12px;z-index:5;background:#00ff88;color:#000;padding:4px 12px;border-radius:20px;font-size:0.7rem;font-weight:700;">🔴 LIVE</span>' : ''}
                 </div>
                 <div class="project-card-body">
                     <h3>${project.title}</h3>
@@ -150,7 +199,7 @@ function renderProjects(category = 'all') {
                         ).join('')}
                     </div>
                     <a href="${project.link}" target="_blank" rel="noopener" class="btn-primary" style="padding: 10px 25px; font-size: 0.85rem;">
-                        <span>View Project</span>
+                        <span>${isLive ? 'Visit Site' : 'View Project'}</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -223,27 +272,29 @@ function initPdfPreview() {
 }
 
 // ========================
-// CHATBOT - FULL DATA
+// CHATBOT - FULL DATA WITH LIVINKEY
 // ========================
 const botResponses = {
-    about: "Mohammed Aminu Shehe is a passionate full-stack web and mobile developer born on 12th June 2005. He's currently in his 3rd year of Diploma in CSE at Lovely Professional University, Punjab. He completed a 4-month internship at NyotaTech Hub in Zanzibar (Jan 2026 - May 2026) and a 2-months training at eGovernment Agency, Zanzibar.",
+    about: "Mohammed Aminu Shehe is a passionate full-stack web and mobile developer born on 12th June 2005. He completed his Diploma in CSE with CGPA 8.6 (86%) and is now pursuing B.Tech in CSE at Lovely Professional University, Punjab. He worked as a Full-Stack Developer at Livinkey in Phagwara, completed a 4-month internship at NyotaTech Hub in Zanzibar (Jan 2026 - May 2026) and a 2-months training at eGovernment Agency, Zanzibar.",
     skills: "MO has expertise in: HTML/CSS (95%), JavaScript (90%), Dart (85%), Python (85%), PHP (85%), Flutter (85%), React (85%), Node.js (80%), Firebase (80%), Bootstrap (95%), Git/GitHub (90%), UI/UX Design (85%), RESTful APIs (85%), and Problem Solving (90%).",
-    projects: "MO has developed 10+ projects including: \n🔹 Hat-Trick Scents - E-commerce website for luxury perfumes with WhatsApp ordering & chatbot. \n🔹 SalahStreaks - Islamic gamification mobile app for tracking daily ibadat with streaks, points, Quran verses, and reminders. \n🔹 Digital Health Tracker - Mobile health monitoring app. \n🔹 Business Management System - Full-stack business management system with role-based access control. \n🔹 E-Commerce Platform - Full-featured online store. 🔹 Files Management System - Document organization system. \n🔹 Football Club System - Team management platform. \n🔹 VitalSign Pro - Healthcare management system. \n🔹 ABC Medicos Pharmacy - Pharmacy management. \n🔹 MiniMarket E-Commerce - Grocery store platform. \n🔹 Dynamic Form Generator - Form builder tool. \n🔹 Portfolio Website - Personal portfolio. \n🔹 GameNest - Gaming platform.",
-    experience: "MO's experience includes: \n1. Mobile Development Intern at NyotaTech Hub (Jan-May 2026) - Built Flutter apps including SalahStreaks with Firebase integration and state management using Provider. \n2. Full-Stack Web Training at eGovernment Agency (Jul-Aug 2025) - Built responsive UIs and RESTful APIs using Node.js and Express. \n3. Currently pursuing Diploma in CSE at LPU (2023-Present) with 8.5+ CGPA.",
-    education: "MO is currently in his 3rd (final) year of Diploma in Computer Science Engineering at Lovely Professional University, Punjab. He maintains a CGPA of 8.5+. He completed his Higher Secondary Education in Science stream from Zanzibar, Tanzania.",
+    projects: "MO has developed 16+ projects including: \n🔹 Livinkey - A comprehensive PG management platform with admin console, public website, backend API, and mobile apps. (LIVE: livinkey.com & admin.livinkey.com) \n🔹 Livinkey App - Cross-platform Flutter mobile app for tenants and guests with FCM push notifications, bill management, maintenance requests, and document uploads. (LIVE) \n🔹 Hat-Trick Scents - E-commerce website for luxury perfumes with WhatsApp ordering & chatbot. (LIVE) \n🔹 E-Commerce Platform - Full-featured online store. (LIVE) \n🔹 Business Management System - Full-stack business management system with role-based access control. (LIVE) \n🔹 Files Management System - Document organization system. (LIVE) \n🔹 GameNest - Gaming platform. (LIVE) \n🔹 Portfolio Website - Personal portfolio. (LIVE: molittle.fourbrothers.online) \n🔹 SalahStreaks - Islamic gamification mobile app for tracking daily ibadat with streaks, points, and rewards. \n🔹 Digital Health Tracker - Mobile health monitoring app. \n🔹 Football Club System - Team management platform. \n🔹 VitalSign Pro - Healthcare management system. \n🔹 ABC Medicos Pharmacy - Pharmacy management. \n🔹 MiniMarket E-Commerce - Grocery store platform. \n🔹 Dynamic Form Generator - Form builder tool.",
+    livinkey: "Livinkey is a comprehensive PG management platform that I developed. It includes: \n🔹 Public Website (livinkey.com) - PG search, feedback, chatbot, and booking. \n🔹 Admin Console (admin.livinkey.com) - Full management of tenants, guests, bills, payments, PGs, maintenance, documents, and feedbacks. \n🔹 Backend API - RESTful API with Node.js, Express, MySQL, JWT authentication, OTP verification, and role-based access control. \n🔹 Mobile Apps - Flutter apps for tenants and guests with push notifications (FCM), bill management, maintenance requests, document uploads, and feedback. (LIVE) \n🔹 Features: Tenant/Guest management, Bill generation, Payment proofs, Cash payments, Fine adjustments, Maintenance requests, Document uploads, Feedback system, and Real-time notifications.",
+    experience: "MO's experience includes: \n1. Full-Stack Developer at Livinkey (Aug 2026 - Sept 2026) - Built a comprehensive PG management platform with admin console, public website, backend API, and mobile apps. Implemented JWT authentication with OTP and RBAC. \n2. Mobile Development Intern at NyotaTech Hub (Jan-May 2026) - Built Flutter apps including SalahStreaks with Firebase integration and state management using Provider. \n3. Full-Stack Web Training at eGovernment Agency (Jul-Aug 2025) - Built responsive UIs and RESTful APIs using Node.js and Express.",
+    education: "MO's Education: \n🎓 B.Tech in Computer Science Engineering - Lovely Professional University (2026-Present) - Currently in Second Year \n🎓 Diploma in Computer Science Engineering - Lovely Professional University (2023-2026) - Completed with CGPA 8.6 (86%) \n🎓 Higher Secondary Education - Science Stream (2020-2023) - Zanzibar, Tanzania",
     certificates: "MO holds 7 certificates: \n1. My Curriculum Vitae \n2. Summer Training Certificate (eGAZ) \n3. JavaScript Advanced Concepts \n4. Cyber Security - Hackafest \n5. Kali Linux & Windows Hacking \n6. eGAZ Industrial Training \n7. NyotaTech Hub Internship.",
     contact: "You can reach MO via: \n📧 Email: molittle1011@gmail.com \n📱 Phone: +255 677 532 140 \n📍 Location: Fuoni, Zanzibar \n💬 WhatsApp: +255 677 532 140 \nAlso connect on GitHub, LinkedIn, Instagram, and Twitter.",
-    future: "MO plans to complete his Diploma in CSE (2026), then pursue a Bachelor's degree. His goal is to become a tech lead and eventually start his own tech company focusing on innovative health-tech and fintech solutions. He's currently working on expanding SalahStreaks to include community features and real-time leaderboards.",
+    future: "MO plans to complete his B.Tech in CSE (2029), then pursue a Master's degree or industry roles. His goal is to become a tech lead and eventually start his own tech company focusing on innovative health-tech and fintech solutions. He's currently working on expanding SalahStreaks to include community features and real-time leaderboards.",
     hobbies: "MO is a football enthusiast who enjoys playing and watching football. He also loves reading tech blogs, exploring new technologies, and contributing to open-source projects. In his free time, he works on Islamic apps to benefit the Ummah.",
-    achievements: "MO's achievements include: \n✅ Maintaining 8.5+ CGPA \n✅ Completing 2 prestigious internships \n✅ Developing 10+ production-ready projects \n✅ Winning Hackafest cybersecurity quiz \n✅ Getting certified in 7 technologies \n✅ Building SalahStreaks with 50+ daily active users \n✅ Successfully deploying Hat-Trick Scents e-commerce platform"
+    achievements: "MO's achievements include: \n✅ Completing Diploma in CSE with CGPA 8.6 (86%) \n✅ Working as Full-Stack Developer at Livinkey \n✅ Completing 2 prestigious internships \n✅ Developing 16+ production-ready projects \n✅ Winning Hackafest cybersecurity quiz \n✅ Getting certified in 7 technologies \n✅ Building Livinkey - a full-scale PG management platform \n✅ Building Livinkey App - a cross-platform Flutter app with FCM (LIVE) \n✅ Building SalahStreaks with 50+ daily active users \n✅ Successfully deploying multiple live projects \n✅ Currently pursuing B.Tech in CSE"
 };
 
 const keywordMapping = {
     about: ["about", "background", "who", "information", "tell me", "introduce", "bio", "profile"],
     skills: ["skill", "technology", "tech", "expertise", "proficient", "know", "languages", "frameworks"],
-    projects: ["project", "work", "portfolio", "built", "developed", "creation", "app", "application", "salahstreaks", "hat-trick", "e-commerce"],
+    projects: ["project", "work", "portfolio", "built", "developed", "creation", "app", "application", "salahstreaks", "hat-trick", "e-commerce", "livinkey"],
+    livinkey: ["livinkey", "pg management", "admin.livinkey", "property management", "tenant management", "livinkey app"],
     experience: ["experience", "intern", "internship", "work", "job", "career", "professional"],
-    education: ["education", "study", "student", "school", "college", "university", "lpu", "degree"],
+    education: ["education", "study", "student", "school", "college", "university", "lpu", "degree", "cgpa"],
     certificates: ["certificate", "certification", "credential", "achievement", "award", "recognition"],
     contact: ["contact", "reach", "email", "phone", "whatsapp", "call", "message", "connect"],
     future: ["future", "plan", "goal", "aspiration", "career", "dream", "aim", "objective"],
@@ -514,7 +565,6 @@ function initContactForm() {
     });
 }
 
-
 // NEWSLETTER FORM - FormSubmit.co
 // ========================
 function initNewsletter() {
@@ -526,15 +576,12 @@ function initNewsletter() {
     form.parentNode.replaceChild(newForm, form);
     
     newForm.addEventListener('submit', function(e) {
-        // Let the form submit naturally to FormSubmit.co
-        // But show a loading state
         const btn = this.querySelector('button');
         const originalIcon = btn.innerHTML;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
         btn.style.pointerEvents = 'none';
         btn.style.opacity = '0.7';
         
-        // Re-enable after 5 seconds (in case of slow response)
         setTimeout(() => {
             btn.innerHTML = originalIcon;
             btn.style.pointerEvents = 'auto';
