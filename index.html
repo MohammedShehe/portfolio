@@ -330,7 +330,7 @@
                             <div class="profile-social">
                                 <a href="https://github.com/mohammedshehe" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                                 <a href="https://www.linkedin.com/in/mohammed-shehe-7b6a542b3" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/mo_little11" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/mo_little11" class="socialsocial-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                                 <a href="https://twitter.com/mo_little11" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                             </div>
                         </div>
@@ -694,7 +694,6 @@
                     <div class="timeline-content glass-card">
                         <h3>B.Tech in Computer Science Engineering</h3>
                         <h4>Lovely Professional University, Punjab</h4>
-
                         <p>Currently in Second Year with focus on advanced web development, mobile app development, databases, and software engineering.</p>
                         <ul class="timeline-list">
                             <li>Building upon Diploma foundation with advanced coursework</li>
@@ -880,15 +879,8 @@
                     </div>
                 </div>
                 
-                <!-- ==================== FIXED CONTACT FORM ==================== -->
-                <form class="contact-form glass-card" id="contactForm" action="https://formsubmit.co/molittle1011@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
-                    <input type="hidden" name="_captcha" value="true">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://molittle.fourbrothers.online/thank-you.html">
-                    <input type="hidden" name="_url" value="https://molittle.fourbrothers.online/">
-                    <input type="text" name="_honey" style="display:none">
-
+                <!-- ==================== FIXED CONTACT FORM (AJAX) ==================== -->
+                <form class="contact-form glass-card" id="contactForm">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
                         <label for="name">Full Name</label>
@@ -905,7 +897,7 @@
                         <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                         <label for="message">Message</label>
                     </div>
-                    <button type="submit" class="btn-primary neon-btn full-width">
+                    <button type="submit" class="btn-primary neon-btn full-width" id="submitBtn">
                         <span>Send Message</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
@@ -957,16 +949,10 @@
                     <h4>Newsletter</h4>
                     <p>Subscribe to get updates on my latest projects and tech insights.</p>
                     
-                    <!-- ==================== FIXED NEWSLETTER FORM ==================== -->
-                    <form class="newsletter-form" id="newsletterForm" action="https://formsubmit.co/molittle1011@gmail.com" method="POST">
+                    <!-- ==================== FIXED NEWSLETTER FORM (AJAX) ==================== -->
+                    <form class="newsletter-form" id="newsletterForm">
                         <input type="email" name="email" placeholder="Your Email" required aria-label="Email for newsletter">
-                        <input type="hidden" name="_subject" value="New Newsletter Subscription">
-                        <input type="hidden" name="_captcha" value="true">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://molittle.fourbrothers.online/thank-you.html">
-                        <input type="hidden" name="_url" value="https://molittle.fourbrothers.online/">
-                        <input type="text" name="_honey" style="display:none">
-                        <button type="submit" aria-label="Subscribe">
+                        <button type="submit" aria-label="Subscribe" id="newsletterBtn">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>

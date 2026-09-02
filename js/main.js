@@ -546,47 +546,99 @@ function initSmoothScroll() {
 }
 
 // ========================
-// CONTACT FORM
+// CONTACT FORM - AJAX VERSION (FIXED)
 // ========================
 function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
-    
-    form.addEventListener('submit', function(e) {
-        const submitBtn = this.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitBtn = document.getElementById('submitBtn');
         const originalText = submitBtn.innerHTML;
+
         submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
         submitBtn.disabled = true;
-        
-        setTimeout(() => {
+
+        const formData = new FormData(form);
+        formData.append('_subject', 'New Contact Form Submission from Portfolio');
+        formData.append('_template', 'table');
+        formData.append('_captcha', 'false');
+
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/molittle1011@gmail.com', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Force redirect to thank-you page
+                window.location.href = 'https://molittle.fourbrothers.online/thank-you.html';
+            } else {
+                alert('Something went wrong. Please try again.');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            alert('Network error. Please try again later.');
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
-        }, 5000);
+        }
     });
 }
 
-// NEWSLETTER FORM - FormSubmit.co
+// ========================
+// NEWSLETTER FORM - AJAX VERSION (FIXED)
 // ========================
 function initNewsletter() {
     const form = document.getElementById('newsletterForm');
     if (!form) return;
-    
-    // Remove any existing submit listeners
-    const newForm = form.cloneNode(true);
-    form.parentNode.replaceChild(newForm, form);
-    
-    newForm.addEventListener('submit', function(e) {
-        const btn = this.querySelector('button');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const btn = document.getElementById('newsletterBtn');
         const originalIcon = btn.innerHTML;
+
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
         btn.style.pointerEvents = 'none';
         btn.style.opacity = '0.7';
-        
-        setTimeout(() => {
+
+        const formData = new FormData(form);
+        formData.append('_subject', 'New Newsletter Subscription');
+        formData.append('_template', 'table');
+        formData.append('_captcha', 'false');
+
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/molittle1011@gmail.com', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Force redirect to thank-you page
+                window.location.href = 'https://molittle.fourbrothers.online/thank-you.html';
+            } else {
+                alert('Something went wrong. Please try again.');
+                btn.innerHTML = originalIcon;
+                btn.style.pointerEvents = 'auto';
+                btn.style.opacity = '1';
+            }
+        } catch (error) {
+            console.error('Newsletter error:', error);
+            alert('Network error. Please try again later.');
             btn.innerHTML = originalIcon;
             btn.style.pointerEvents = 'auto';
             btn.style.opacity = '1';
-        }, 5000);
+        }
     });
 }
 
@@ -627,10 +679,6 @@ console.log('📊 Total projects:', projectsData.length);
 // ========================
 // SEO & ANALYTICS
 // ========================
-
-// ========================
-// SCHEMA MARKUP VALIDATION
-// ========================
 function validateSchema() {
     console.log('🔍 Schema markup loaded successfully');
     console.log('📊 Person Schema: Name - Mohammed Aminu Shehe');
@@ -639,31 +687,18 @@ function validateSchema() {
     console.log('📊 Breadcrumb Schema: Active');
 }
 
-// ========================
-// SITEMAP SUBMISSION (Manual)
-// ========================
 function logSitemapInfo() {
-    console.log('📄 Sitemap URL: https://mohammedshehe.github.io/portfolio/sitemap.xml');
-    console.log('🤖 robots.txt: https://mohammedshehe.github.io/portfolio/robots.txt');
-    console.log('📝 Submit sitemap to:');
-    console.log('  - Google Search Console: https://search.google.com/search-console');
-    console.log('  - Bing Webmaster Tools: https://www.bing.com/webmasters');
+    console.log('📄 Sitemap URL: https://molittle.fourbrothers.online/sitemap.xml');
+    console.log('🤖 robots.txt: https://molittle.fourbrothers.online/robots.txt');
 }
 
-// ========================
-// KEYWORD TRACKING
-// ========================
 function logKeywords() {
     const keywords = [
         'Mohammed Aminu Shehe',
         'MO11',
         'MO Dev',
-        'MO',
-        'Developer MO',
         'Full-Stack Developer',
         'Mobile Developer',
-        'Web Developer',
-        'Software Developer',
         'Flutter Developer',
         'React Developer',
         'Node.js Developer',
@@ -674,9 +709,6 @@ function logKeywords() {
     console.log('🔑 Primary Keywords:', keywords.join(', '));
 }
 
-// ========================
-// PAGE TITLE & META VALIDATION
-// ========================
 function validatePageMetadata() {
     const title = document.title;
     const desc = document.querySelector('meta[name="description"]');
@@ -687,9 +719,6 @@ function validatePageMetadata() {
     console.log('📋 Meta Keywords:', keywords ? keywords.content : 'Missing!');
 }
 
-// ========================
-// INITIALIZE SEO LOGGING
-// ========================
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 SEO Configuration Loaded');
     validateSchema();
