@@ -33,30 +33,12 @@ const projectsData = [
         status: "live"
     },
     {
-        title: "E-Commerce Platform",
-        description: "A full-stack e-commerce platform with user authentication, product catalog, shopping cart, and secure transactions.",
-        technologies: "HTML, CSS, JS, Node.js, MySQL",
-        category: "fullstack",
-        image: "images/FBSC.png",
-        link: "https://fourbrothers.online",
-        status: "live"
-    },
-    {
         title: "Business Management System",
         description: "A full-stack business management system with user authentication with 2 Factor Authentication, Three different Interfaces for three different user roles.",
         technologies: "HTML, CSS, JS, Node.js, MySQL",
         category: "fullstack",
         image: "images/fbbms.png",
         link: "https://management.fourbrothers.online",
-        status: "live"
-    },
-    {
-        title: "Files Management System",
-        description: "A responsive files management application with proper authentication, view, upload, and delete functionalities.",
-        technologies: "JavaScript, HTML, CSS, MySQL, Node.js",
-        category: "fullstack",
-        image: "images/brothers_cloud.png",
-        link: "https://mohammedshehe.github.io/BrothersCloud-frontend/",
         status: "live"
     },
     {
@@ -277,7 +259,7 @@ function initPdfPreview() {
 const botResponses = {
     about: "Mohammed Aminu Shehe is a passionate full-stack web and mobile developer born on 12th June 2005. He completed his Diploma in CSE with CGPA 8.6 (86%) and is now pursuing B.Tech in CSE at Lovely Professional University, Punjab. He worked as a Full-Stack Developer at Livinkey in Phagwara, completed a 4-month internship at NyotaTech Hub in Zanzibar (Jan 2026 - May 2026) and a 2-months training at eGovernment Agency, Zanzibar.",
     skills: "MO has expertise in: HTML/CSS (95%), JavaScript (90%), Dart (85%), Python (85%), PHP (85%), Flutter (85%), React (85%), Node.js (80%), Firebase (80%), Bootstrap (95%), Git/GitHub (90%), UI/UX Design (85%), RESTful APIs (85%), and Problem Solving (90%).",
-    projects: "MO has developed 16+ projects including: \n🔹 Livinkey - A comprehensive PG management platform with admin console, public website, backend API, and mobile apps. (LIVE: livinkey.com & admin.livinkey.com) \n🔹 Livinkey App - Cross-platform Flutter mobile app for tenants and guests with FCM push notifications, bill management, maintenance requests, and document uploads. (LIVE) \n🔹 Hat-Trick Scents - E-commerce website for luxury perfumes with WhatsApp ordering & chatbot. (LIVE) \n🔹 E-Commerce Platform - Full-featured online store. (LIVE) \n🔹 Business Management System - Full-stack business management system with role-based access control. (LIVE) \n🔹 Files Management System - Document organization system. (LIVE) \n🔹 GameNest - Gaming platform. (LIVE) \n🔹 Portfolio Website - Personal portfolio. (LIVE: molittle.fourbrothers.online) \n🔹 SalahStreaks - Islamic gamification mobile app for tracking daily ibadat with streaks, points, and rewards. \n🔹 Digital Health Tracker - Mobile health monitoring app. \n🔹 Football Club System - Team management platform. \n🔹 VitalSign Pro - Healthcare management system. \n🔹 ABC Medicos Pharmacy - Pharmacy management. \n🔹 MiniMarket E-Commerce - Grocery store platform. \n🔹 Dynamic Form Generator - Form builder tool.",
+    projects: "MO has developed 12+ projects including: \n🔹 Livinkey - A comprehensive PG management platform with admin console, public website, backend API, and mobile apps. (LIVE: livinkey.com & admin.livinkey.com) \n🔹 Livinkey App - Cross-platform Flutter mobile app for tenants and guests with FCM push notifications, bill management, maintenance requests, and document uploads. (LIVE) \n🔹 Hat-Trick Scents - E-commerce website for luxury perfumes with WhatsApp ordering & chatbot. (LIVE) \n🔹 Business Management System - Full-stack business management system with role-based access control. (LIVE) \n🔹 GameNest - Gaming platform. (LIVE) \n🔹 Portfolio Website - Personal portfolio. (LIVE: molittle.fourbrothers.online) \n🔹 SalahStreaks - Islamic gamification mobile app for tracking daily ibadat with streaks, points, and rewards. \n🔹 Digital Health Tracker - Mobile health monitoring app. \n🔹 Football Club System - Team management platform. \n🔹 VitalSign Pro - Healthcare management system. \n🔹 ABC Medicos Pharmacy - Pharmacy management. \n🔹 MiniMarket E-Commerce - Grocery store platform. \n🔹 Dynamic Form Generator - Form builder tool.",
     livinkey: "Livinkey is a comprehensive PG management platform that I developed. It includes: \n🔹 Public Website (livinkey.com) - PG search, feedback, chatbot, and booking. \n🔹 Admin Console (admin.livinkey.com) - Full management of tenants, guests, bills, payments, PGs, maintenance, documents, and feedbacks. \n🔹 Backend API - RESTful API with Node.js, Express, MySQL, JWT authentication, OTP verification, and role-based access control. \n🔹 Mobile Apps - Flutter apps for tenants and guests with push notifications (FCM), bill management, maintenance requests, document uploads, and feedback. (LIVE) \n🔹 Features: Tenant/Guest management, Bill generation, Payment proofs, Cash payments, Fine adjustments, Maintenance requests, Document uploads, Feedback system, and Real-time notifications.",
     experience: "MO's experience includes: \n1. Full-Stack Developer at Livinkey (Aug 2026 - Sept 2026) - Built a comprehensive PG management platform with admin console, public website, backend API, and mobile apps. Implemented JWT authentication with OTP and RBAC. \n2. Mobile Development Intern at NyotaTech Hub (Jan-May 2026) - Built Flutter apps including SalahStreaks with Firebase integration and state management using Provider. \n3. Full-Stack Web Training at eGovernment Agency (Jul-Aug 2025) - Built responsive UIs and RESTful APIs using Node.js and Express.",
     education: "MO's Education: \n🎓 B.Tech in Computer Science Engineering - Lovely Professional University (2026-Present) - Currently in Second Year \n🎓 Diploma in Computer Science Engineering - Lovely Professional University (2023-2026) - Completed with CGPA 8.6 (86%) \n🎓 Higher Secondary Education - Science Stream (2020-2023) - Zanzibar, Tanzania",
@@ -285,7 +267,7 @@ const botResponses = {
     contact: "You can reach MO via: \n📧 Email: molittle1011@gmail.com \n📱 Phone: +255 677 532 140 \n📍 Location: Fuoni, Zanzibar \n💬 WhatsApp: +255 677 532 140 \nAlso connect on GitHub, LinkedIn, Instagram, and Twitter.",
     future: "MO plans to complete his B.Tech in CSE (2029), then pursue a Master's degree or industry roles. His goal is to become a tech lead and eventually start his own tech company focusing on innovative health-tech and fintech solutions. He's currently working on expanding SalahStreaks to include community features and real-time leaderboards.",
     hobbies: "MO is a football enthusiast who enjoys playing and watching football. He also loves reading tech blogs, exploring new technologies, and contributing to open-source projects. In his free time, he works on Islamic apps to benefit the Ummah.",
-    achievements: "MO's achievements include: \n✅ Completing Diploma in CSE with CGPA 8.6 (86%) \n✅ Working as Full-Stack Developer at Livinkey \n✅ Completing 2 prestigious internships \n✅ Developing 16+ production-ready projects \n✅ Winning Hackafest cybersecurity quiz \n✅ Getting certified in 7 technologies \n✅ Building Livinkey - a full-scale PG management platform \n✅ Building Livinkey App - a cross-platform Flutter app with FCM (LIVE) \n✅ Building SalahStreaks with 50+ daily active users \n✅ Successfully deploying multiple live projects \n✅ Currently pursuing B.Tech in CSE"
+    achievements: "MO's achievements include: \n✅ Completing Diploma in CSE with CGPA 8.6 (86%) \n✅ Working as Full-Stack Developer at Livinkey \n✅ Completing 2 prestigious internships \n✅ Developing 12+ production-ready projects \n✅ Winning Hackafest cybersecurity quiz \n✅ Getting certified in 7 technologies \n✅ Building Livinkey - a full-scale PG management platform \n✅ Building Livinkey App - a cross-platform Flutter app with FCM (LIVE) \n✅ Building SalahStreaks with 50+ daily active users \n✅ Successfully deploying multiple live projects \n✅ Currently pursuing B.Tech in CSE"
 };
 
 const keywordMapping = {
