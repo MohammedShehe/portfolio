@@ -1,5 +1,5 @@
 // ========================
-// PROJECT DATA - COMPLETE WITH LIVINKEY
+// PROJECT DATA - COMPLETE WITH LIVINKEY + MEDITRACK + FOUR BROTHERS
 // ========================
 const projectsData = [
     // ============================================================
@@ -59,10 +59,28 @@ const projectsData = [
         link: "https://molittle.fourbrothers.online",
         status: "live"
     },
+    {
+        title: "Four Brothers – Family Story",
+        description: "An elegant, scroll-driven family storytelling website for the Four Brothers of Fuoni Kisimani, Zanzibar. Features pinned scrollytelling chapters, GSAP animations, progress rail navigation, and a warm, timeless design that celebrates unity and legacy.",
+        technologies: "HTML5, CSS3, JavaScript, GSAP, ScrollTrigger, Bootstrap Icons",
+        category: "frontend",
+        image: "images/fourbrothers.png",   // add this image later
+        link: "https://fourbrothers.online", // or the exact URL you use
+        status: "live"
+    },
 
     // ============================================================
-    // LEVEL 2: COMPLETED BUT NOT DEPLOYED (GitHub Repositories)
+    // LEVEL 2: COMPLETED BUT NOT DEPLOYED (GitHub / Local)
     // ============================================================
+    {
+        title: "MediTrack – Medicine & Caregiver Platform",
+        description: "A full-stack medicine reminder and caregiver management system. Flutter mobile app with real-time dose tracking, family/caregiver roles, AI chatbot, reports, notifications, and a robust Node.js + Express + MySQL backend. Includes OTP auth, preference system, dose logs, and privacy-focused features.",
+        technologies: "Flutter, Dart, Provider, Node.js, Express.js, MySQL, JWT, FCM, AI Chat",
+        category: "fullstack",
+        image: "images/meditrack.png",      // add this image later
+        link: "https://github.com/mohammedshehe", // replace with real repo when ready
+        status: "completed"
+    },
     {
         title: "SalahStreaks",
         description: "An Islamic gamification mobile app for tracking daily ibadat (worship) with streaks, points, and rewards. Features include Salah tracking with individual prayer logging, Quran verses, Islamic events calendar, reminder system, analytics graphs, and history view.",
@@ -254,27 +272,43 @@ function initPdfPreview() {
 }
 
 // ========================
-// CHATBOT - FULL DATA WITH LIVINKEY
+// CHATBOT - FULL DATA WITH LIVINKEY + MEDITRACK + FOUR BROTHERS
 // ========================
 const botResponses = {
     about: "Mohammed Aminu Shehe is a passionate full-stack web and mobile developer born on 12th June 2005. He completed his Diploma in CSE with CGPA 8.6 (86%) and is now pursuing B.Tech in CSE at Lovely Professional University, Punjab. He worked as a Full-Stack Developer at Livinkey in Phagwara, completed a 4-month internship at NyotaTech Hub in Zanzibar (Jan 2026 - May 2026) and a 2-months training at eGovernment Agency, Zanzibar.",
+    
     skills: "MO has expertise in: HTML/CSS (95%), JavaScript (90%), Dart (85%), Python (85%), PHP (85%), Flutter (85%), React (85%), Node.js (80%), Firebase (80%), Bootstrap (95%), Git/GitHub (90%), UI/UX Design (85%), RESTful APIs (85%), and Problem Solving (90%).",
-    projects: "MO has developed 12+ projects including: \n🔹 Livinkey - A comprehensive PG management platform with admin console, public website, backend API, and mobile apps. (LIVE: livinkey.com & admin.livinkey.com) \n🔹 Livinkey App - Cross-platform Flutter mobile app for tenants and guests with FCM push notifications, bill management, maintenance requests, and document uploads. (LIVE) \n🔹 Hat-Trick Scents - E-commerce website for luxury perfumes with WhatsApp ordering & chatbot. (LIVE) \n🔹 Business Management System - Full-stack business management system with role-based access control. (LIVE) \n🔹 GameNest - Gaming platform. (LIVE) \n🔹 Portfolio Website - Personal portfolio. (LIVE: molittle.fourbrothers.online) \n🔹 SalahStreaks - Islamic gamification mobile app for tracking daily ibadat with streaks, points, and rewards. \n🔹 Digital Health Tracker - Mobile health monitoring app. \n🔹 Football Club System - Team management platform. \n🔹 VitalSign Pro - Healthcare management system. \n🔹 ABC Medicos Pharmacy - Pharmacy management. \n🔹 MiniMarket E-Commerce - Grocery store platform. \n🔹 Dynamic Form Generator - Form builder tool.",
-    livinkey: "Livinkey is a comprehensive PG management platform that I developed. It includes: \n🔹 Public Website (livinkey.com) - PG search, feedback, chatbot, and booking. \n🔹 Admin Console (admin.livinkey.com) - Full management of tenants, guests, bills, payments, PGs, maintenance, documents, and feedbacks. \n🔹 Backend API - RESTful API with Node.js, Express, MySQL, JWT authentication, OTP verification, and role-based access control. \n🔹 Mobile Apps - Flutter apps for tenants and guests with push notifications (FCM), bill management, maintenance requests, document uploads, and feedback. (LIVE) \n🔹 Features: Tenant/Guest management, Bill generation, Payment proofs, Cash payments, Fine adjustments, Maintenance requests, Document uploads, Feedback system, and Real-time notifications.",
+    
+    projects: "MO has developed 13+ projects including: \n🔹 Livinkey - A comprehensive PG management platform with admin console, public website, backend API, and mobile apps. (LIVE: livinkey.com & admin.livinkey.com) \n🔹 Livinkey App - Cross-platform Flutter mobile app for tenants and guests with FCM push notifications. (LIVE) \n🔹 Four Brothers – Elegant family storytelling website with GSAP scrollytelling for the Four Brothers of Fuoni Kisimani, Zanzibar. (LIVE) \n🔹 MediTrack – Full-stack medicine reminder & caregiver platform (Flutter + Node.js + MySQL) with AI chat, dose tracking, family roles and reports. \n🔹 Hat-Trick Scents - E-commerce website for luxury perfumes. (LIVE) \n🔹 Business Management System - Full-stack system with role-based access. (LIVE) \n🔹 GameNest - Gaming platform. (LIVE) \n🔹 Portfolio Website - Personal portfolio. (LIVE) \n🔹 SalahStreaks - Islamic gamification mobile app. \n🔹 Digital Health Tracker - Mobile health monitoring app. \n🔹 Football Club System - Team management platform. \n🔹 VitalSign Pro - Healthcare management system. \n🔹 ABC Medicos Pharmacy - Pharmacy management. \n🔹 MiniMarket E-Commerce - Grocery store platform. \n🔹 Dynamic Form Generator - Form builder tool.",
+    
+    livinkey: "Livinkey is a comprehensive PG management platform that I developed. It includes: \n🔹 Public Website (livinkey.com) - PG search, feedback, chatbot, and booking. \n🔹 Admin Console (admin.livinkey.com) - Full management of tenants, guests, bills, payments, PGs, maintenance, documents, and feedbacks. \n🔹 Backend API - RESTful API with Node.js, Express, MySQL, JWT authentication, OTP verification, and role-based access control. \n🔹 Mobile Apps - Flutter apps for tenants and guests with push notifications (FCM), bill management, maintenance requests, document uploads, and feedback. (LIVE)",
+    
+    meditrack: "MediTrack is a full-stack medicine reminder and caregiver platform I built. \n🔹 Flutter mobile app with beautiful UI, dark/light mode, real-time dose tracking, streaks, and notifications. \n🔹 Caregiver & family member roles so relatives can monitor patients. \n🔹 AI chatbot for medicine questions and support. \n🔹 Node.js + Express + MySQL backend with JWT auth, OTP, reports, preference system, and dose logs. \n🔹 Privacy-focused features including terms & privacy pages.",
+    
+    fourbrothers: "Four Brothers is an elegant family storytelling website I created for my family in Fuoni Kisimani, Zanzibar. It features pinned scrollytelling chapters for each family member (Father, Mother and the four brothers), GSAP + ScrollTrigger animations, a progress rail, and a warm, timeless design that celebrates unity and legacy since 2003.",
+    
     experience: "MO's experience includes: \n1. Full-Stack Developer at Livinkey (Aug 2026 - Sept 2026) - Built a comprehensive PG management platform with admin console, public website, backend API, and mobile apps. Implemented JWT authentication with OTP and RBAC. \n2. Mobile Development Intern at NyotaTech Hub (Jan-May 2026) - Built Flutter apps including SalahStreaks with Firebase integration and state management using Provider. \n3. Full-Stack Web Training at eGovernment Agency (Jul-Aug 2025) - Built responsive UIs and RESTful APIs using Node.js and Express.",
+    
     education: "MO's Education: \n🎓 B.Tech in Computer Science Engineering - Lovely Professional University (2026-Present) - Currently in Second Year \n🎓 Diploma in Computer Science Engineering - Lovely Professional University (2023-2026) - Completed with CGPA 8.6 (86%) \n🎓 Higher Secondary Education - Science Stream (2020-2023) - Zanzibar, Tanzania",
+    
     certificates: "MO holds 7 certificates: \n1. My Curriculum Vitae \n2. Summer Training Certificate (eGAZ) \n3. JavaScript Advanced Concepts \n4. Cyber Security - Hackafest \n5. Kali Linux & Windows Hacking \n6. eGAZ Industrial Training \n7. NyotaTech Hub Internship.",
+    
     contact: "You can reach MO via: \n📧 Email: molittle1011@gmail.com \n📱 Phone: +255 677 532 140 \n📍 Location: Fuoni, Zanzibar \n💬 WhatsApp: +255 677 532 140 \nAlso connect on GitHub, LinkedIn, Instagram, and Twitter.",
-    future: "MO plans to complete his B.Tech in CSE (2029), then pursue a Master's degree or industry roles. His goal is to become a tech lead and eventually start his own tech company focusing on innovative health-tech and fintech solutions. He's currently working on expanding SalahStreaks to include community features and real-time leaderboards.",
+    
+    future: "MO plans to complete his B.Tech in CSE (2029), then pursue a Master's degree or industry roles. His goal is to become a tech lead and eventually start his own tech company focusing on innovative health-tech and fintech solutions. He's currently working on expanding SalahStreaks and MediTrack.",
+    
     hobbies: "MO is a football enthusiast who enjoys playing and watching football. He also loves reading tech blogs, exploring new technologies, and contributing to open-source projects. In his free time, he works on Islamic apps to benefit the Ummah.",
-    achievements: "MO's achievements include: \n✅ Completing Diploma in CSE with CGPA 8.6 (86%) \n✅ Working as Full-Stack Developer at Livinkey \n✅ Completing 2 prestigious internships \n✅ Developing 12+ production-ready projects \n✅ Winning Hackafest cybersecurity quiz \n✅ Getting certified in 7 technologies \n✅ Building Livinkey - a full-scale PG management platform \n✅ Building Livinkey App - a cross-platform Flutter app with FCM (LIVE) \n✅ Building SalahStreaks with 50+ daily active users \n✅ Successfully deploying multiple live projects \n✅ Currently pursuing B.Tech in CSE"
+    
+    achievements: "MO's achievements include: \n✅ Completing Diploma in CSE with CGPA 8.6 (86%) \n✅ Working as Full-Stack Developer at Livinkey \n✅ Completing 2 prestigious internships \n✅ Developing 13+ production-ready projects \n✅ Winning Hackafest cybersecurity quiz \n✅ Getting certified in 7 technologies \n✅ Building Livinkey - a full-scale PG management platform \n✅ Building MediTrack - medicine & caregiver platform \n✅ Building Four Brothers family storytelling website \n✅ Building SalahStreaks with 50+ daily active users \n✅ Successfully deploying multiple live projects \n✅ Currently pursuing B.Tech in CSE"
 };
 
 const keywordMapping = {
     about: ["about", "background", "who", "information", "tell me", "introduce", "bio", "profile"],
     skills: ["skill", "technology", "tech", "expertise", "proficient", "know", "languages", "frameworks"],
-    projects: ["project", "work", "portfolio", "built", "developed", "creation", "app", "application", "salahstreaks", "hat-trick", "e-commerce", "livinkey"],
+    projects: ["project", "work", "portfolio", "built", "developed", "creation", "app", "application", "salahstreaks", "hat-trick", "e-commerce", "livinkey", "meditrack", "four brothers", "fourbrothers"],
     livinkey: ["livinkey", "pg management", "admin.livinkey", "property management", "tenant management", "livinkey app"],
+    meditrack: ["meditrack", "medicine", "reminder", "caregiver", "dose", "medication", "health tracker"],
+    fourbrothers: ["four brothers", "fourbrothers", "family", "zanzibar", "fuoni", "kisimani", "storytelling", "scrollytelling"],
     experience: ["experience", "intern", "internship", "work", "job", "career", "professional"],
     education: ["education", "study", "student", "school", "college", "university", "lpu", "degree", "cgpa"],
     certificates: ["certificate", "certification", "credential", "achievement", "award", "recognition"],
