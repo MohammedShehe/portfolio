@@ -76,7 +76,7 @@ const projectsData = [
         title: "MediTrack – Medicine & Caregiver Platform",
         description: "A full-stack medicine reminder and caregiver management system. Flutter mobile app with real-time dose tracking, family/caregiver roles, AI chatbot, reports, notifications, and a robust Node.js + Express + MySQL backend. Includes OTP auth, preference system, dose logs, and privacy-focused features.",
         technologies: "Flutter, Dart, Provider, Node.js, Express.js, MySQL, JWT, FCM, AI Chat",
-        category: "fullstack",
+        category: "mobile",
         image: "images/meditrack.png",      // add this image later
         link: "https://github.com/mohammedshehe", // replace with real repo when ready
         status: "completed"
