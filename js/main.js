@@ -20,7 +20,7 @@ const projectsData = [
         technologies: "Flutter, Dart, Firebase Cloud Messaging, Provider, Dio, Shared Preferences",
         category: "mobile",
         image: "images/livinkey_app.jpg",
-        link: "https://drive.google.com/file/d/1tYPxWm3rS49XAeSRb53oDHmbASZN0m9p/view",
+        link: "https://drive.google.com/file/d/1YyoBdhQfP614eVjayC3VYXHSl2c5YRxa/view?usp=drive_link",
         status: "live"
     },
     {
@@ -68,6 +68,15 @@ const projectsData = [
         link: "https://fourbrothers.online", // or the exact URL you use
         status: "live"
     },
+    {
+        title: "SalahStreaks",
+        description: "An Islamic gamification mobile app for tracking daily ibadat (worship) with streaks, points, and rewards. Features include Salah tracking with individual prayer logging, Quran verses, Islamic events calendar, reminder system, analytics graphs, and history view.",
+        technologies: "Flutter, Dart, Shared Preferences, Provider, fl_chart, table_calendar, image_picker",
+        category: "mobile",
+        image: "images/salah.jpeg",
+        link: "https://drive.google.com/file/d/1y6Pw36_Ha5ZcpXb3TaMowMw_S53lEiKM/view?usp=drive_link",
+        status: "live"
+    },
 
     // ============================================================
     // LEVEL 2: COMPLETED BUT NOT DEPLOYED (GitHub / Local)
@@ -79,15 +88,6 @@ const projectsData = [
         category: "mobile",
         image: "images/meditrack.png",      // add this image later
         link: "https://github.com/mohammedshehe", // replace with real repo when ready
-        status: "completed"
-    },
-    {
-        title: "SalahStreaks",
-        description: "An Islamic gamification mobile app for tracking daily ibadat (worship) with streaks, points, and rewards. Features include Salah tracking with individual prayer logging, Quran verses, Islamic events calendar, reminder system, analytics graphs, and history view.",
-        technologies: "Flutter, Dart, Shared Preferences, Provider, fl_chart, table_calendar, image_picker",
-        category: "mobile",
-        image: "images/salah.jpeg",
-        link: "https://github.com/mohammedshehe/salahstreaks",
         status: "completed"
     },
     {
